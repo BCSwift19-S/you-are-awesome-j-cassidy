@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nc1-sg-ZEE">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nc1-sg-ZEE">
                                 <rect key="frame" x="16" y="34" width="343" height="110"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="110" id="X2X-la-gap"/>
@@ -38,7 +38,7 @@
                                     <action selector="myButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K6c-hE-e6N"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image9" translatesAutoresizingMaskIntoConstraints="NO" id="n72-is-3ib">
+                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="n72-is-3ib">
                                 <rect key="frame" x="16" y="190" width="343" height="410"/>
                             </imageView>
                         </subviews>
@@ -60,6 +60,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="myImageView" destination="n72-is-3ib" id="mYD-pK-6bD"/>
                         <outlet property="myMessage" destination="nc1-sg-ZEE" id="lT9-e2-J6d"/>
                     </connections>
                 </viewController>
@@ -68,7 +69,4 @@
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="image9" width="854" height="643"/>
-    </resources>
 </document>

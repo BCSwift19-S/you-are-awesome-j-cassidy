@@ -10,8 +10,11 @@ import UIKit
 
 class ViewController: UIViewController {
    
+    @IBOutlet weak var myImageView: UIImageView!
     @IBOutlet weak var myMessage: UILabel!
-    var index = 0
+    var index = -1
+    var imageIndex = -1
+    var numberOfImages = 10
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +37,13 @@ class ViewController: UIViewController {
         
         index = newIndex
         myMessage.text = messages[index]
+        
+        repeat {
+            newIndex = Int.random(in: 0..<numberOfImages)
+        } while imageIndex == newIndex
+        
+        imageIndex = newIndex
+        myImageView.image = UIImage(named: "image\(imageIndex)")
         
 //        myMessage.text = messages.randomElement()!
 //        myMessage.text = messages[index]
