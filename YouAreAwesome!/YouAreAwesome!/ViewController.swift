@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
    
     @IBOutlet weak var myMessage: UILabel!
-    // var index = 0
+    var index = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,10 +19,23 @@ class ViewController: UIViewController {
 
     @IBAction func myButtonPressed(_ sender: UIButton) {
         
-        let messages = ["You Are Awesome!", "You Are Great!", "You Are Amazing!"]
-       
-        myMessage.text = messages.randomElement()!
+        let messages = ["You Are Awesome!",
+                        "You Are Great!",
+                        "You Are Amazing!",
+                        "You Are Fantastic!",
+                        "You Are Tremendous!",
+                        "You Are Unbelievable!"]
         
+        var newIndex = -1
+        
+        repeat {
+            newIndex = Int.random(in: 0..<messages.count)
+        } while index == newIndex
+        
+        index = newIndex
+        myMessage.text = messages[index]
+        
+//        myMessage.text = messages.randomElement()!
 //        myMessage.text = messages[index]
 //
 //        if index == messages.count - 1 {
