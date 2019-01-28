@@ -26,7 +26,7 @@ class ViewController: UIViewController {
                         "You Are Tremendous!",
                         "You Are Unbelievable!"]
         
-        var newIndex = -1
+        var newIndex: Int
         
         repeat {
             newIndex = Int.random(in: 0..<messages.count)
